@@ -1,38 +1,37 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package lancenter
- */
+<?php get_header(); ?>
 
-get_header();
-?>
 
-	<main id="primary" class="site-main">
+<div class="breadcrumb-area size">
+  <nav>
+    <ul class="breadcrumb">
+      <li class="breadcrumb__item">
+        <a href="<?php echo home_url(); ?>">LANCETIER</a>
+      </li>
+      <li class="breadcrumb__item">
+        <span><?php single_post_title(); ?></span>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<div class="size page-content">
 
-			get_template_part( 'template-parts/content', 'page' );
+  <!--News Sidebar Start-->
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) :the_post(); ?>
+      <!--Start Single Blog One-->
+      <!--End Single Blog One-->
+      <?php get_template_part('template-parts/content', get_post_type()); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+    <?php endwhile; ?>
 
-		endwhile; // End of the loop.
-		?>
+    <div class="paginations">
+      <?php the_posts_pagination(); ?>
+    </div>
+  <?php else :
+    get_template_part('template-parts/content', 'none'); ?>
+  <?php endif; ?>
+</div>
 
-	</main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
