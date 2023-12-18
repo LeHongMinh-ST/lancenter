@@ -29,6 +29,34 @@ body {
     line-height: normal;
     text-decoration: none;
 }
+
+
+.btn-lp button, input[type="submit"] {
+  display: inline-flex;
+  padding: 11px 33px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 37px;
+  background: linear-gradient(90deg, #C9C977 0%, #B2AC30 102.14%);
+  /* shadow_01 */
+  box-shadow: 4px 4px 0px 0px rgba(68, 68, 66, 0.75);
+  color: #FFF;
+  text-align: center;
+  font-family: Noto Sans JP;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.btn-lp .disabled {
+  opacity: 0.5;
+}
+
 .btn-lp.btn-lp-primary a {
     background: #053BA1;
 }
@@ -721,6 +749,12 @@ body {
     padding: 40px 0;
     border: none;
     outline: none;
+}
+
+.contact-area .contact-content .contact-item .item-main .contact-input input[type=email] {
+  padding: 40px 0;
+  border: none;
+  outline: none;
 }
 .contact-area .contact-content .contact-item .item-main .contact-input select {
     padding: 40px 0px;

@@ -17,6 +17,22 @@
     $('#modelDepartment').modal('show');
   })
 
+  $('#confirm').change(function () {
+    if ($(this).is(':checked')) {
+      $('#btnSubmit').removeClass('disabled');
+      $('#btnSubmit').removeAttr('disabled');
+    } else {
+      $('#btnSubmit').addClass('disabled');
+      $('#btnSubmit').attr('disabled', 'disabled');
+    }
+  })
+
+  $('#btnSubmit').click(function (e) {
+    if ($(this).hasClass('disabled')) {
+      e.preventDefault();
+    }
+  })
+
 })(jQuery);
 
 const swiper = new Swiper('#mySwiper', {
