@@ -40,7 +40,7 @@
         ?>
 
         <div class="nav-button btn-lp">
-          <a href="#">
+          <a href="<?= home_url()?>#contact">
             無料相談・お問い合わせ
           </a>
         </div>

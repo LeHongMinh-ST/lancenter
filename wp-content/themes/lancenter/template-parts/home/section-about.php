@@ -10,9 +10,9 @@
       私たちは、中立な立場でお客様に最適なツールの導入をサポートします
     </div>
     <div class="btn-lp text-center btn-about">
-      <a href="">
-        無料相談・お問い合わせ
-      </a>
+        <a href="<?= home_url()?>#contact">
+            無料相談・お問い合わせ
+        </a>
     </div>
   </div>
 </div>
