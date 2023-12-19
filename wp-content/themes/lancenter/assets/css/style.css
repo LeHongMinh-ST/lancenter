@@ -1081,7 +1081,7 @@ body {
     margin-top: 20px;
 }
 
-.news-details__thumbnail .list .category {
+.news-details__thumbnail .list .category span {
     border-radius: 50px;
     background: #053BA1;
     color: #FFF;
@@ -1091,6 +1091,8 @@ body {
     font-weight: 900;
     line-height: 27px; /* 192.857% */
     padding: 1px 20px;
+    margin-right: 5px;
+    display: inline-block;
 }
 
 .news-details__thumbnail .list .date {
@@ -1100,6 +1102,12 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 27px; /* 192.857% */
+}
+
+.news-details__content {
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: start;
 }
 
 .categories-area {

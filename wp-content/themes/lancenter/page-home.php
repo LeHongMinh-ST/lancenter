@@ -29,77 +29,7 @@ Template Name: Home
 
 <?php get_template_part('template-parts/home/faq')?>
 
-
-<div class="news-area">
-  <div class="news-main size">
-    <div class="section-header-title news-header text-center">
-      お役立ち情報
-    </div>
-    <div class="news-content">
-      <div class="news-list">
-        <div class="single-blog-card">
-          <div class="news-image">
-            <a href="/">
-              <img src="<?= THEME_URI; ?>/images/blog.png" alt="">
-            </a>
-          </div>
-          <div class="news-content">
-            <div class="news-content__header">
-              2023.00.00
-            </div>
-            <a href="" class="news-content__text">
-              ERPとは？基本的な意味を解説
-            </a>
-          </div>
-          <div class="news-badge">
-            用語解説
-          </div>
-        </div>
-        <div class="single-blog-card">
-          <div class="news-image">
-            <a href="/">
-              <img src="<?= THEME_URI; ?>/images/blog.png" alt="">
-            </a>
-          </div>
-          <div class="news-content">
-            <div class="news-content__header">
-              2023.00.00
-            </div>
-            <a href="" class="news-content__text">
-              ERPとは？基本的な意味を解説
-            </a>
-          </div>
-          <div class="news-badge">
-            用語解説
-          </div>
-        </div>
-        <div class="single-blog-card">
-          <div class="news-image">
-            <a href="/">
-              <img src="<?= THEME_URI; ?>/images/blog.png" alt="">
-            </a>
-          </div>
-          <div class="news-content">
-            <div class="news-content__header">
-              2023.00.00
-            </div>
-            <a href="" class="news-content__text">
-              ERPとは？基本的な意味を解説
-            </a>
-          </div>
-          <div class="news-badge">
-            用語解説
-          </div>
-        </div>
-      </div>
-      <div class="news-button btn-lp btn-lp-primary text-center">
-        <a href="">
-          お役立ち情報一覧
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('template-parts/home/news')?>
 
 <div class="program-area">
   <div class="program-main size">

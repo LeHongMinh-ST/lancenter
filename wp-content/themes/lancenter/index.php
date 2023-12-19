@@ -11,7 +11,7 @@
                     <a href="<?php echo home_url(); ?>">LANCETIER</a>
                 </li>
                 <li class="breadcrumb__item">
-                    <a href=""><?php single_post_title(); ?></a>
+                    <span><?php single_post_title(); ?></span>
                 </li>
             </ul>
         </nav>
@@ -33,8 +33,6 @@
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) :the_post(); ?>
                         <!--Start Single Blog One-->
-                        <!--End Single Blog One-->
-                        <!--                        --><?php //get_template_part('template-parts/content', get_post_type()); ?>
                         <div class="single-blog-card">
                             <div class="news-image">
                                 <a href="<?= get_the_permalink() ?>">
@@ -50,7 +48,7 @@
                                     <?= get_the_title() ?>
                                 </a>
                             </div>
-                            <?php $categories = get_the_category(); ?>
+                            <?php $categories = get_the_category(get_the_ID()); ?>
                             <div class="category">
                                 <?php foreach ($categories as $category) { ?>
                                     <span class="news-badge">
@@ -58,8 +56,9 @@
                                     </span>
                                 <?php } ?>
                             </div>
-
                         </div>
+                        <!--End Single Blog One-->
+
 
                     <?php endwhile; ?>
 
