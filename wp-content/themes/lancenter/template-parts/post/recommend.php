@@ -1,8 +1,8 @@
 <?php
-$postNews = get_posts([
+$postRecommend = get_posts([
     'post_type' => 'post',
     'posts_per_page' => 3,
-    'orderby' => 'date',
+    'orderby' => 'comment_count',
     'order' => 'DESC',
 ]);
 ?>
@@ -13,7 +13,7 @@ $postNews = get_posts([
         </div>
         <div class="news-content">
             <div class="news-list">
-                <?php foreach ($postNews as $post){?>
+                <?php foreach ($postRecommend as $post){?>
                     <!--Start Single Blog One-->
                     <div class="single-blog-card">
                         <div class="news-image">

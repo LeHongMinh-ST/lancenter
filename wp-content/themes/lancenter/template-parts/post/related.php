@@ -1,10 +1,18 @@
 <?php
-$postNews = get_posts([
+$postID = get_the_ID();
+
+$postCategories = wp_get_post_categories($postID);
+
+$agrs = [
     'post_type' => 'post',
     'posts_per_page' => 3,
     'orderby' => 'date',
     'order' => 'DESC',
-]);
+    'category__in' => $postCategories,
+    'post__not_in' => [$postID]
+];
+
+$postRelated = get_posts($agrs);
 ?>
 <div class="news-area">
     <div class="news-main size">
@@ -13,7 +21,7 @@ $postNews = get_posts([
         </div>
         <div class="news-content">
             <div class="news-list">
-                <?php foreach ($postNews as $post){?>
+                <?php foreach ($postRelated as $post){?>
                     <!--Start Single Blog One-->
                     <div class="single-blog-card">
                         <div class="news-image">

@@ -41,6 +41,10 @@
 </div>
 
 
+<?php get_template_part('template-parts/post/related') ?>
+
+<?php get_template_part('template-parts/post/recommend') ?>
+
 <?php get_template_part('template-parts/home/categories') ?>
 
 <?php get_footer(); ?>
