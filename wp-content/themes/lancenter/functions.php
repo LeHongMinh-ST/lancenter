@@ -6,7 +6,7 @@ $themePrefix = 'lancenter';
 
 $themeUri = get_template_directory_uri() . '/assets';
 
-$themeVersion = '1.0.16';
+$themeVersion = '1.0.22';
 
 
 
